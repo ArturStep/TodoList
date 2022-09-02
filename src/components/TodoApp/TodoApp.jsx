@@ -29,9 +29,9 @@ const TodoApp = () => {
 
   const visibleItem = !!todos.length;
 
-  const itemsLeft = filteredTodos.filter((todo) => !filteredTodos.isCompleted).length;
+  const itemsLeft = filteredTodos.filter((todo) => !todo.isCompleted).length;
 
-  const completedTodo = filteredTodos.filter((todo) => filteredTodos.isCompleted).length
+  const completedTodo = filteredTodos.filter((todo) => todo.isCompleted).length
 
   return (
     <>
