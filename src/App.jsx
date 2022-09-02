@@ -1,10 +1,10 @@
 import './App.css';
-import TodoLogic from "./components/TodoLogic/TodoLogic";
+import TodoApp from "./components/TodoApp/TodoApp";
 
 function App() {
   return (
     <div className="App">
-      <TodoLogic/>
+      <TodoApp />
     </div>
   );
 }

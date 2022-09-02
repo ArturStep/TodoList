@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    font-size: 100px;
+
+    color: rgba(175, 47, 47, 0.15);
+}

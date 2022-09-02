@@ -1,0 +1,69 @@
+.todoItem, .editTodoItem {
+    display: block;
+    padding: 15px 10px 15px 0;
+
+    word-break: break-word;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.editTodoItem {
+    padding: 0;
+}
+
+.todoList {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.todoList:hover .delete {
+    display: block;
+}
+
+.completed, .uncompleted{
+    margin: auto 10px auto 15px;
+    padding: 5px;
+
+    color: #72b374;
+    border: 1px solid #72b374;
+    border-radius: 12px;
+
+    font-size: 15px;
+}
+
+.uncompleted {
+    color: #cfe5cf;
+    border: 1px solid #cfe5cf;
+}
+
+.itemTitle, .itemTitleCompleted {
+    display: flex;
+    text-align: start;
+    width: 100%;
+
+    font-size: 24px;
+    color: #4d4d4d;
+
+    transition: color 0.4s;
+}
+
+.itemTitleCompleted {
+    color: #d9d9d9;
+
+    text-decoration: line-through;
+}
+
+.delete {
+    position: absolute;
+    right: 15px;
+    bottom: 6px;
+
+    display: none;
+
+    color: #9e5f5f;
+
+    font-size: 15px;
+}

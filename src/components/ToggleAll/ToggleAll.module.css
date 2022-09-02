@@ -1,0 +1,13 @@
+.toggleAll, .toggleAllActive {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+
+    color: #dbdbdb;
+
+    font-size: 30px;
+}
+
+.toggleAllActive {
+    color: #4d4d4d;
+}

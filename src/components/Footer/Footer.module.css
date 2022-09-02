@@ -1,0 +1,55 @@
+.footer {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+
+    color: #4d4d4d;
+    background-color: #ffffff;
+}
+
+.buttons {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.filterBtn, .filterBtnActive {
+    margin: 0 2px;
+
+    border: none;
+    border-radius: 6px;
+    color: #4d4d4d;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.filterBtnActive {
+    margin: 0 1px;
+
+    border: 1px solid #d6d6d6;
+}
+
+.deleteCompletedBtn, .deleteCompletedBtnActive {
+    position: absolute;
+    right: 0;
+
+    display: none;
+    margin-right: 10px;
+
+    color: #4d4d4d;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.deleteCompletedBtnActive {
+    display: block;
+}
+
+.deleteCompletedBtnActive:hover {
+    text-decoration: underline;
+}

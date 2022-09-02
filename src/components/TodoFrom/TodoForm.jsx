@@ -1,9 +1,8 @@
-import {useRef} from "react";
+import React, {useRef} from "react";
 
 import s from './TodoFrom.module.css';
-import {MdKeyboardArrowDown} from "react-icons/md";
 
-const TodoForm = ({addTodo, editTodo, edit}) => {
+const TodoForm = ({addTodo, editTodo, edit, setEdit}) => {
   const todoRef = useRef(null)
 
   const handleSubmit = (e) => {
@@ -14,8 +13,20 @@ const TodoForm = ({addTodo, editTodo, edit}) => {
 
   const editSubmit = (e) => {
     e.preventDefault()
-    editTodo(todoRef.current.value)
+    editTodo({
+      id: edit.id,
+      title: todoRef.current.value
+    })
+    setEdit('')
     e.target.reset()
+  }
+
+  const handleBlur = () => {
+    editTodo({
+      id: edit.id,
+      title: edit.title
+    })
+    setEdit('')
   }
 
   return (
@@ -24,13 +35,13 @@ const TodoForm = ({addTodo, editTodo, edit}) => {
         <form onSubmit={editSubmit}>
           <input type={"text"}
                  autoFocus={true}
-                 onBlur={() => editTodo(edit.title)}
+                 onBlur={handleBlur}
                  defaultValue={edit.title}
                  ref={todoRef}
                  className={s.edit}/>
         </form>
       </> : <>
-        <form onSubmit={handleSubmit} className={s.addFrom}>
+        <form onSubmit={handleSubmit}>
           <input type={"text"}
                  autoFocus={true}
                  placeholder={'Whats needs to be done?'}
