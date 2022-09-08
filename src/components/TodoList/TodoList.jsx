@@ -13,12 +13,12 @@ const TodoList = ({filteredTodos, completeTodo, deleteTodo, edit, setEdit, editT
           <TodoForm edit={edit} editTodo={editTodo} setEdit={setEdit} key={edit.id}/> :
           <li className={s.todoItem} key={todo.id}>
             <div className={s.todoList}>
-              <ImCheckmark className={todo.isCompleted ? s.completed : s.uncompleted}
+              <ImCheckmark className={todo.isCompleted ? s.completedTodo : s.uncompletedTodo}
                            onClick={() => completeTodo(todo.id)}/>
-              <div className={todo.isCompleted ? s.itemTitleCompleted : s.itemTitle}
+              <h2 className={todo.isCompleted ? s.itemTitleCompleted : s.itemTitle}
                    onDoubleClick={() => setEdit({id: todo.id, title: todo.title})}>
                 {todo.title}
-              </div>
+              </h2>
               <ImCross className={s.delete} onClick={() => deleteTodo(todo.id)}/>
             </div>
           </li>

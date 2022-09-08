@@ -5,6 +5,9 @@ const reducer = (state, action) => {
   switch (action.type) {
 
     case 'ADD_TODO':
+      if(!action.payload){
+        return state
+      }
       return [{
         id: v4(),
         title: action.payload,
@@ -23,6 +26,9 @@ const reducer = (state, action) => {
       });
 
     case 'EDIT_TODO':
+      if(!action.payload.title){
+        return state
+      }
       return state.map(todo => (todo.id === action.payload.id ?
         {...todo, title: action.payload.title} : todo))
 

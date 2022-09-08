@@ -9,14 +9,15 @@
     background-color: #ffffff;
 }
 
-.buttons {
+.filters {
     position: absolute;
     right: 0;
     left: 0;
 }
 
 .filterBtn, .filterBtnActive {
-    margin: 0 2px;
+    margin: 0 4px;
+    padding: 2px;
 
     border: none;
     border-radius: 6px;
@@ -52,4 +53,13 @@
 
 .deleteCompletedBtnActive:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 450px) {
+    .footer {
+        height: 40px;
+    }
+    .filters {
+        top: 35px;
+    }
 }

@@ -28,4 +28,8 @@ input.addInput::placeholder {
     color: #dbdbdb
 }
 
-
+@media only screen and (max-width: 400px){
+    .addInput, .edit{
+        font-size: 18px;
+    }
+}

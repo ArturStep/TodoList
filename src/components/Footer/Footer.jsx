@@ -7,7 +7,7 @@ const Footer = ({itemsLeft, filter, changeFilter, deleteCompleted, completedTodo
   return (
     <footer className={s.footer}>
       <div>{itemsLeft} items left</div>
-      <section className={s.buttons}>
+      <section className={s.filters}>
         <button className={filter === 'ALL' ? s.filterBtnActive : s.filterBtn}
                 onClick={() => changeFilter('ALL')}>All
         </button>

@@ -23,7 +23,7 @@
     display: block;
 }
 
-.completed, .uncompleted{
+.completedTodo, .uncompletedTodo{
     margin: auto 10px auto 15px;
     padding: 5px;
 
@@ -34,7 +34,7 @@
     font-size: 15px;
 }
 
-.uncompleted {
+.uncompletedTodo {
     color: #cfe5cf;
     border: 1px solid #cfe5cf;
 }
@@ -66,4 +66,13 @@
     color: #9e5f5f;
 
     font-size: 15px;
+}
+
+@media only screen and (max-width: 400px){
+    .itemTitle, .itemTitleCompleted {
+        font-size: 18px;
+    }
+    .delete {
+        display: block;
+    }
 }
